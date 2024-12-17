@@ -1,0 +1,78 @@
+*{
+    position: relative;
+}
+body{
+    background: #191919;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    height: 80vh;
+    width: 80vh;
+    border: 3px solid #a5a5a5;
+    display: flex;
+    flex-wrap: wrap;
+    overflow:hidden;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+    background-size:cover;
+    flex-grow: 1;
+    transition: all 0.5s ease-out;
+}
+.container:hover{
+    flex-grow: 3;
+}
+.container:hover h1{
+    rotate: 0deg;
+    top: -35vh;
+    left: 35%;
+}
+.container:hover ~ .container{
+    flex-grow: 1;
+}
+.a{
+    background-image: url("../assets/29-299380_image-for-windows-10-lock-screen-wallpaper-download.jpg");
+}
+.b{
+    background-image: url("../assets/forest_trees_fog_110131_1920x1080.jpg");
+}
+.c{
+    background-image: url("../assets/Sea.jpg");
+}
+.d{
+    background-image: url("../assets/St.\ Petersburg.jpg");
+}
+h1{
+    font-family:Alkatra;
+    color: white;
+    rotate: 90deg;
+    position: relative;
+    top: 0;
+    left: 20%;
+    transition: all 0.5s ease-out;
+}
+.content{
+    color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    position: relative;
+    opacity: 0;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
+}
+.container:hover .content{
+    display: block;
+    color: whitesmoke;
+    left: -15%;
+    top: -10%;
+    opacity: 1;
+    transition-delay: .25s;
+}

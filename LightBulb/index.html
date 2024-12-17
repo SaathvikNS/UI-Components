@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightBulb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" onload="loaded()">
+    <div class="wire"></div>
+    <div class="holder"></div>
+    <div id="bulb"></div>
+    <div id="bulbx"></div>
+    <div class="switch">
+        <div id="ball"></div>
+    </div>
+    <div class="gradient"></div>
+    
+    <script>
+        let body = document.getElementById("body")
+        let currentstate = "off"
+        let button = document.getElementById("ball")
+        let sheet = document.styleSheets[0]
+        let bulb = document.getElementById("bulbx")
+
+        function loaded(){
+            body.classList.toggle('body')
+            sheet.insertRule(":root{--light-color: #f5f5f5;--dark-color: #191919; }")
+        }
+        button.onclick = function(){
+            if(currentstate == "off"){
+                button.classList.toggle('ball')
+                currentstate = "on"
+                sheet.removeRule(":root{--light-color: #f5f5f5;--dark-color: #191919; }")
+                sheet.insertRule(":root{--light-color: #191919;--dark-color: #f5f5f5; }")
+                bulb.classList.toggle("bulb")
+            } else {
+                button.classList.toggle('ball')
+                currentstate = "off"
+                sheet.removeRule(":root{--light-color: #191919;--dark-color: #f5f5f5; }")
+                sheet.insertRule(":root{--light-color: #f5f5f5;--dark-color: #191919; }")
+                bulb.classList.toggle("bulb")
+            }
+        }
+    </script>
+</body>
+</html>

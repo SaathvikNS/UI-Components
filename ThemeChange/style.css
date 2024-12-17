@@ -1,0 +1,94 @@
+:root{
+    --bg: #5e5e5e;
+    --element-bg: #484848;
+    --element-border: #202020;
+}
+body{
+    background: var(--bg);
+    margin: 0;
+}
+.body *{
+    transition: all 5s ease;
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.elementholder{
+    height: 50px;
+    width: 100px;
+    background: var(--element-bg);
+    transform: translateY(-50%);
+    border: 5px solid var(--element-border);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+#ball{
+    height: 32px;
+    width: 32px;
+    margin: 0 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ms{
+    background: #fff;
+    border-radius: 50%;
+    height: 100%;
+    aspect-ratio: 1;
+    z-index: 1;
+    border: 0px solid #484848;
+}
+#cover{
+    background: #484848;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    position: relative;
+    top: -7px;
+    left: 12px;
+}
+.ball{
+    transform: translate(155%);
+}
+.ray{
+    position: absolute;
+    height: 6px;
+    width: 3px;
+    border-radius: 2px;
+    background: #E6C54A;
+    opacity: 0;
+}
+.a,.b,.c,.d{
+    opacity: 100%;
+    width: 4px;
+    height: 100%;
+}
+.b{
+    rotate: 90deg;
+}
+.c{
+    rotate: 45deg;
+}
+.d{
+    rotate: -45deg;
+}
+.bgimage{
+    position: absolute;
+    height: 80%;
+    width: 50%;
+    z-index: 1;
+}
+.dark{
+    left: 45px;
+}
+.light{
+    left: 10px;
+    transform: translateX(300%);
+}

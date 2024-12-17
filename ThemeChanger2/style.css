@@ -1,0 +1,41 @@
+body{
+    background: #535353;
+    margin: 0;
+}
+.body *{
+    transition: all 0.5s ease;
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.holder{
+    height: 100px;
+    width: 300px;
+    background: #484848;
+    transform: translateY(-5%);
+    border-radius: 50px;
+    border: 2px solid #202020;
+    display: flex;
+    align-items: center;
+}
+.switch{
+    position: fixed;
+    margin: 0 5px;
+    height: 90%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.sun{
+    background: #e6c54a;
+    box-shadow: inset 8px -8px 4.5px #B55D0B40;
+    left: 0
+}
+.moon{
+    background: #e0e0e0;
+    box-shadow: inset 8px -8px 5px #9b9b9b90;
+    left: 200px;
+}
