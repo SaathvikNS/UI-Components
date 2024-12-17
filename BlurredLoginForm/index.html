@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blurredLoginForm2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/logout_4421772.png">
+</head>
+<body id="body" onload="loaded()">
+    <div class="wrapper">
+        <div class="header">
+            <h1>Login</h1>
+        </div>
+        <div class="container">
+            <input type="text" name="username" id="username" onchange="filleduser()">
+            <p class="placeholder user" id="user">Username</p>
+            <svg class="person" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="whitesmoke" class="bi bi-person-fill" viewBox="0 0 16 16"> <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/> </svg>
+            <input type="password" name="password" id="password" onchange="filledpass()">
+            <p class="placeholder pass" id="pass">Password</p>
+            <svg onclick="showhide()" class="eye" id="open" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="whitesmoke" class="bi bi-eye-fill" viewBox="0 0 16 16"> <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/> <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/> </svg>
+            <svg onclick="showhide()" class="eye" id="close" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="whitesmoke" class="bi bi-eye-slash-fill" viewBox="0 0 16 16"> <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/> <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/> </svg>
+            <input type="checkbox" name="rememberme" id="rememberme">
+            <p class="checkbox">Remember Me</p>
+            <button id="login" onclick="loggedin()"><p>Login</p></button>
+            <p>Don't have an account? <a href="#" onclick="registerpressed()">Register</a></p>
+        </div>
+    </div>
+    
+    <script>
+        let username = document.getElementById("username")
+        let password = document.getElementById("password")
+        let remember = document.getElementById("rememberme")
+        let open = document.getElementById("open")
+        let close = document.getElementById("close")
+        let body = document.getElementById("body")
+
+        function loaded(){
+            body.classList.toggle("body")
+        }
+        function showhide() {
+            if(password.type == "password"){
+                password.type = "text"
+                open.style.opacity="0%";
+                close.style.opacity="100%"
+            } else {
+                password.type = "password"
+                open.style.opacity="100%";
+                close.style.opacity="0%"
+            }
+        }
+        function loggedin(){
+            if(username.value == "" || password.value == ""){
+                alert("Please enter both username and password")
+            } else {
+                if(remember.checked){
+                    alert(username.value + "\n" + password.value + "\n" + "Remembered")
+                } else {
+                    alert(username.value + "\n" + password.value + "\n" + "Not Remembered")
+                }
+            }
+        }
+        function registerpressed(){
+            alert("Cannot be registered at the moment please try again next year")
+        }
+        function filleduser(){
+            if (username.value != "") {
+                document.getElementById('user').classList.toggle("userplace")
+            } else {
+                document.getElementById('user').classList.toggle("userplace")
+            }
+        }
+        function filledpass(){
+            if (password.value != "") {
+                document.getElementById('pass').classList.toggle("passplace")
+            } else {
+                document.getElementById('pass').classList.toggle("passplace")
+            }
+        }
+    </script>
+</body>
+</html>

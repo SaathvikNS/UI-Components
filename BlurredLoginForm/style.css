@@ -1,0 +1,190 @@
+@font-face {
+    font-family: Now-Bold;
+    src: url(Now-Bold.otf);
+}
+@font-face {
+    font-family: Inder;
+    src: url(Inder-Regular.ttf);
+}
+*{
+    position: relative;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/forest_trees_fog_110131_1920x1080.jpg");
+    background-size:cover;
+    margin: 0;
+}
+.body *{
+    transition: all .5s ease;
+}
+.wrapper{
+    width: 25em;
+    height: 30em;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    border-radius: 0 0 10px 10px;
+}
+h1{
+    font-size:25px;
+    font-family: Now-Bold;
+    color: #454545;
+}
+.container{
+    width: 90%;
+    margin: 40px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 80%;
+    height: 3em;
+    margin: 10px 0;
+    background: transparent;
+    border-radius: 50px;
+    border: 2px solid whitesmoke;
+    padding: 0 20px;
+    color: white;
+    font-weight:500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    outline: none;
+}
+.placeholder{
+    position: absolute;
+    left: 30px;
+    color: white;
+    font-weight:500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    z-index: -1;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 2px 5px;
+}
+.user{
+    top: 2px;
+}
+.pass{
+    top: 65px;
+}
+input:focus + .placeholder{
+    font-size: 10px;
+    color: #454545;
+    border-color: whitesmoke;
+    top: -10px;
+    left: 35px;
+    z-index: 1;
+    background: whitesmoke;
+}
+input:focus + .pass{
+    top: 53px;
+}
+.userplace{
+    font-size: 10px;
+    color: #454545;
+    border-color: whitesmoke;
+    top: -10px;
+    left: 35px;
+    z-index: 1;
+    background: whitesmoke;
+}
+.passplace{
+    font-size: 10px;
+    color: #454545;
+    border-color: whitesmoke;
+    top: 53px;
+    left: 35px;
+    z-index: 1;
+    background: whitesmoke;
+}
+.person,.eye{
+    position: absolute;
+    background: none;
+    border: none;
+    left: 300px;
+}
+.person{
+    top: 20px;
+}
+.eye{
+    top: 82px;
+    cursor: pointer;
+}
+#close{
+    opacity: 0%;
+}
+#open{
+    opacity: 100%;
+}
+input[type="checkbox"]{
+    height: 15px;
+    left: -150px;
+    margin: 20px 0;
+    accent-color: whitesmoke;
+    cursor: pointer;
+}
+p{
+    color: whitesmoke;
+    font-family:Inder;
+    font-size: 15px;
+}
+.checkbox{
+    position: absolute;
+    top: 129px;
+    left: 45px;
+}
+#login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 3em;
+    margin: 10px 0;
+    background: whitesmoke;
+    border-radius: 50px;
+    border: 2px solid whitesmoke;
+    outline: none;
+    cursor: pointer;
+}
+#login p{
+    color: #454545;
+    font-weight:900;
+    font-family:Now-Bold;
+    font-size: 18px;
+}
+#login:active{
+    scale:.97;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: underline;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: whitesmoke;
+}
